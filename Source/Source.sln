@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30428.66
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api.evl.watch", "api.evl.watch\api.evl.watch.csproj", "{AE9FA3C4-C4B3-473B-B6E2-831BB807A561}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE9FA3C4-C4B3-473B-B6E2-831BB807A561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE9FA3C4-C4B3-473B-B6E2-831BB807A561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE9FA3C4-C4B3-473B-B6E2-831BB807A561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE9FA3C4-C4B3-473B-B6E2-831BB807A561}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82D0E111-AF95-4626-AB01-53A8E07EFC45}
+	EndGlobalSection
+EndGlobal
