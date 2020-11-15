@@ -65,7 +65,6 @@ namespace client.evl.watch
         {
             try
             {
-                user.Password = new PasswordUtils(user.Password).HashPassword();
                 var myContent = JsonConvert.SerializeObject(user);
                 var data = await apiClient.PostAsync(REGISTER_NEW_USER,  new StringContent(myContent, Encoding.UTF8, "application/json"));
 

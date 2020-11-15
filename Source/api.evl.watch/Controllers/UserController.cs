@@ -20,19 +20,13 @@ namespace api.evl.watch.Controllers
                 throw new Exception("Invalid E-Mail Format or Empty user informations!");
             }
 
-            if ( !new PasswordUtils("", user.Password).isBcrypted() )
-            {
-                ErrorUtils.SetError(new ErrorType("Please verify your input data. Something went wrong!", _errorCode: ErrorTypeCode.InvalidUserRegisteringData), Request);
-                throw new Exception("Please, invoke this service only by using EvlWatcherConsole!");
-            }
-
             try
             {
                 using ( var ctx = new EvlWatchContext() )
                 {
                     ctx.ExecuteStoreCommand("EXEC dbo.usr_InsertNewUser @username, @password, @email",
                     new SqlParameter("username", user.Username),
-                    new SqlParameter("password", user.Password),
+                    new SqlParameter("password", new PasswordUtils(user.Password).HashPassword()),
                     new SqlParameter("email", user.Email));
 
                     return Request.CreateResponse(new DefaultResponseModel<string>(this, System.Net.HttpStatusCode.OK)
