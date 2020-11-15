@@ -28,7 +28,7 @@ namespace api.evl.watch
 
             config.Routes.MapHttpRoute(
                name: "DefaultApi",
-               routeTemplate: "{controller}/{action}/{id}",
+               routeTemplate: "v1/{controller}/{action}/{id}",
                defaults: new { id = RouteParameter.Optional }
             );
             config.Routes.MapHttpRoute(

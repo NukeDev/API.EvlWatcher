@@ -118,6 +118,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="EvlWatchContext.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -129,7 +130,11 @@
     <Compile Include="Handlers\ExceptionsHandler.cs" />
     <Compile Include="Handlers\LogRequestAndResponseHandler.cs" />
     <Compile Include="Models\DefaultResponseModel.cs" />
+    <Compile Include="Models\User\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\ErrorType.cs" />
+    <Compile Include="Utils\ErrorUtils.cs" />
+    <Compile Include="Utils\PasswordUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
