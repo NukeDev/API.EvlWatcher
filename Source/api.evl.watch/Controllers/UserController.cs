@@ -12,9 +12,9 @@ namespace api.evl.watch.Controllers
     {
         [HttpPost]
         [ActionName("register")]
-        public HttpResponseMessage Register([FromBody] UserInfo user)
+        public HttpResponseMessage Register([FromBody] TS_Users user)
         {
-            if ( !user.Verify() )
+            if ( !user.VerifyRegistrationCamps() )
             {
                 ErrorUtils.SetError(new ErrorType("Please verify your input data. Something went wrong!", _errorCode: ErrorTypeCode.InvalidUserRegisteringData), Request);
                 throw new Exception("Invalid E-Mail Format or Empty user informations!");
